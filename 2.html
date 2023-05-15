@@ -1,0 +1,16 @@
+<script>
+    function fibonacci(arg) { // En funktion som innehåller ett argument.
+        let num1 = 0; // En variabel som är för det första talet som kallas för num1.
+        let num2 = 1; // En variabel som är för det andra talet som kallas för num2.
+        let next; // En variabel som inte innehåller något det används för att plusa ihop num1 och num2 för att få nästa tal för fibonaccin.
+
+        for(let i = 1; i <= arg; i++) { // En for loop som börjar med en variabel som innehåller 1, sen om i är mindre eller lika med amount från prompten och sen ökar variabel i räknaren med 1.
+            console.log(num1); // Konsol loggar num1.
+            next = num1 + num2; // Ändrar variabel next med num1 + num2 för att använda det till nästa talet.
+            num1 = num2; // Ändrar variabel num1 med num2.
+            num2 = next; // Ändrar variabel num2 med next.
+        }
+    }
+    let amount = parseInt(prompt("Amount of times:")); // En variabel som innehåller en prompt. Sen använder jag parseInt på prompten för att bara få numret. Prompten används för att ange hur många gånger loopen ska köras.
+    fibonacci(amount); // Kallar på funktionen fibonacci och anger numret som kommer från prompten som ett argument.
+</script>

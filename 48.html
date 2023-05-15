@@ -1,0 +1,12 @@
+<script>
+    function sum() { // En funktion som heter sum.
+        let summa = 0; // Variabel som innehåller 0 som kommer användas för att plusa ihop summan med det som blir upphöjt med.
+        let amount = parseInt(prompt("Amount of times:")); // En variabel som innehåller en prompt ruta som används för hur många gånger den ska göra uträkningen.
+
+        for(let i = 1; i <= amount; i++) {// En for loop som börjar med en variabel som innehåller 1, sen om i är mindre eller lika med amount från prompten och sen ökar variabel i räknaren med 1.
+            summa =+ summa + Math.pow(i, i); // Ändrar värdet till variabeln summa som plusar ihop det gamla värdet + det värdet som är upphöjt med.
+        }
+        console.log(summa); // Konsol loggar summan.
+    }
+    sum(); // Kallar på funktionen sum.
+</script>

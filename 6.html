@@ -1,0 +1,12 @@
+<script>
+    function sum() { // En funktion som kallas för sum och innehåller ett argument.
+        let summa = 0; // En variabel som heter summa som innehåller 0. Denna används för att få den totala summan från alla uträkningar i for loopen.
+        let amount = parseInt(prompt("Amount of times:")); // En variabel som innehåller en prompt. Sen använder jag parseInt på prompten för att bara få numret. Prompten används för att ange hur många gånger loopen ska köras.
+
+        for(let i = 1; i <= amount; i++) { // En for loop som börjar med en variabel som innehåller 1, sen om i är mindre eller lika med amount från prompten och sen ökar variabel i räknaren med 1.
+            summa =+ summa + Math.pow(i, 2); // Ändrar värdet till variabel summa som plusar ihop det gamla värdet + det värdet som är upphöjt med.
+        }
+        console.log(summa); // Konsol loggar summan.
+    }
+    sum(); // Kallar på funktionen sum.
+</script>

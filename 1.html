@@ -1,3 +1,8 @@
 <script>
-    console.log(3 * 5); // Konsol loggar 3 gånger 5 som blir 15.
+    function calc(arg) { // En funktion som innehåller ett argument som används för att multipliceras.
+        for(let i = 1; i <= 200; i++) { // For loop som börjar med en variabel som innehåller 1, sen om variablen är mindre än 200 och sista ökar räknaren på variablen med 1.
+            console.log(`${i}. ${i} * ${arg} = ${i * arg}`); // Konsol loggar värdet av av varje multiplicerat tal.
+        }
+    }
+    calc(5); // Kallar på funktionen och ger den 5 till sitt argument.
 </script>
