@@ -1,0 +1,17 @@
+<script>
+    function letters(arg) {
+        let text = arg;
+        let count = [];
+        text = text.split(" ");
+
+        for(let i = 0; i < text.length; i++) {
+            count = count + text[i].length + "+";
+            count = count.replace("undefined ", "");
+        }
+
+        let result = eval(count.slice(0, -1));
+
+        return console.log(result);
+    }
+    letters("One Two Three Four Five Six Seven Eight Nine Ten");
+</script>
