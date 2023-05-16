@@ -1,17 +1,16 @@
 <script>
-    function letters(arg) {
-        let text = arg;
-        let count = [];
-        text = text.split(" ");
+    function letters(arg) { // En funktion som heter letters och ett argument.
+        let text = arg; // Gör om argumentet från funktionen till en variabel.
+        let count = []; // En variabel som är tom, som kommer användas för att lägga in orden. Detta är för att jag ska göra ett system som räknar alla orden och plusar ihop dem.
+        text = text.split(" "); // Gör som text stringen till en array med varje ord i en spalt för sig.
 
-        for(let i = 0; i < text.length; i++) {
-            count = count + text[i].length + "+";
-            count = count.replace("undefined ", "");
+        for(let i = 0; i < text.length; i++) { // En for loop som börjar med en variabel som innehåller 0, sen om i är mindre eller lika med text längden och sen ökar variabel i räknaren med 1.
+            count = count + text[i].length + "+"; // Skriver om count variabeln med text längden och lägger till ett + för att jag lätt ska kunna räkna ut allt med eval. Sen efter den första gången for loopen körs så kommer den lägga till alla entries i början så att vi inte går misto av de andra entriesen.
         }
 
-        let result = eval(count.slice(0, -1));
+        let result = eval(count.slice(0, -1)); // En variabel som innehåller uträkningen av resultatet. Sen inom eval så använder jag slice(0, -1) vilket tar bort det sista ur strängen vilket jag gör för att det blir ett extra + i slutet efter for loopen är klar.
 
-        return console.log(result);
+        return console.log(result); // Returnerar resultatet till konsolen.
     }
-    letters("One Two Three Four Five Six Seven Eight Nine Ten");
+    letters("One Two Three Four Five Six Seven Eight Nine Ten"); // Kallar på funktionen letters med en sträng som används som ett argument.
 </script>
